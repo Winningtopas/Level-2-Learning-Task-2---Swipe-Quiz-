@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">SwipeQuiz</string>
+    <string name="title">Quiz instructions</string>
+    <string name="underTitle">Swipe right for true, swipe left for false.</string>
+    <string name="textview">TextView</string>
+
 </resources>
