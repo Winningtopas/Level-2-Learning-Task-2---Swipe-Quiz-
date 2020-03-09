@@ -4,7 +4,9 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.item_place.view.*
 
 public class QuestionAdapter(private val questions: List<Question>) :
@@ -30,6 +32,9 @@ public class QuestionAdapter(private val questions: List<Question>) :
         fun bind(question : Question) {
             //itemView.ivPlace.setImageResource(place.imageResId)
             itemView.tvQuestion.text = question.name
+            //itemView.setOnClickListener { Toast.makeText(it.context,  question.trueOrFalse.toString(), Toast.LENGTH_SHORT).show() }
+
+            itemView.setOnClickListener {Snackbar.make(itemView,question.trueOrFalse.toString(),Snackbar.LENGTH_LONG).show()}
         }
     }
 }
